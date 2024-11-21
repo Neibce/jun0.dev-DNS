@@ -1,0 +1,54 @@
+;;
+;; Domain:     jun0.dev.
+;; Exported:   2024-11-21 03:42:11
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+jun0.dev	3600	IN	SOA	dan.ns.cloudflare.com. dns.cloudflare.com. 2048382713 10000 2400 604800 3600
+
+;; NS Records
+jun0.dev.	86400	IN	NS	dan.ns.cloudflare.com.
+jun0.dev.	86400	IN	NS	kiki.ns.cloudflare.com.
+
+;; A Records
+jun0.dev.	1	IN	A	34.82.127.251
+nas.jun0.dev.	1	IN	A	61.76.50.99
+
+;; CNAME Records
+drive.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
+home.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
+mail.jun0.dev.	1	IN	CNAME	jun0.dev.
+photos.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
+ppp.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
+www.jun0.dev.	1	IN	CNAME	jun0.dev.
+
+;; MX Records
+jun0.dev.	1	IN	MX	10 jun0.dev.
+
+;; TXT Records
+_dmarc.jun0.dev.	1	IN	TXT	"v=DMARC1; p=quarantine; rua=mailto:y@jun0.dev"
+jun0.dev.	1	IN	TXT	"v=spf1 include:spf.mailjet.com -all"
+jun0.dev.	1	IN	TXT	"google-site-verification=KOldXNhgnaNYunGWIGoMieDfG2Ns9TTWR2CdzkmIoH0"
+mail._domainkey.jun0.dev.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; t=y;        p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApyu6AYppRTVYKRXQ5LfQRGbh3wC7UAgyFLEdXW+pTVFj5DRg/tqvg1RwTMeQo9Jh3T3eg8EGXYEw2bhxyeiQaqKfkS1wtJjeLQ/qgLiPL071TD2167xsCIp7ZTeYZmWtqf6DHxrxtgy6nD9eB/5IBCvWJBFW4lXMKyBzkulM2h0" "/Qj6V2Xv7ipvpkpad21ij9OPl6PuDFdBsRI       WwhoYdBgbK5s+2G53S/hvpUqAEmKO8N0pMQGb/HBbOoCwWh1B9tJ9GsGb682h+hQg6us4IyE2ZfyYxr7YnO1RgXa4MIHvndAik1Gx5oQttH/xSr9VGtPPU4gUurcsoqlR9E2ltAQIDAQAB"
+mailjet._b02dedc1.jun0.dev.	1	IN	TXT	"b02dedc198102bb4e2486d07d50f7365"
+mailjet._domainkey.jun0.dev.	1	IN	TXT	"k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrm08c4sgsMdBBg/kds1u0JMyhfkkUXY6iKW4yIcjzylaA1SCQCXCOTWBGu5aiVdspjUFTZ+2TXs4nckKUogSwD7i48ow/jt7GV/QfJetSoq8hliwdTKF8a/+WQQU9+ndQYgvZk2K0WqLeHlXEvP0O5xwSynvbWkzz5h3Ayrzj8wIDAQAB"
