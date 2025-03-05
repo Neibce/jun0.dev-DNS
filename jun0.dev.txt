@@ -1,6 +1,6 @@
 ;;
 ;; Domain:     jun0.dev.
-;; Exported:   2024-11-21 03:42:11
+;; Exported:   2025-03-05 01:27:54
 ;;
 ;; This file is intended for use for informational and archival
 ;; purposes ONLY and MUST be edited before use on a production
@@ -24,7 +24,7 @@
 ;;
 ;; Use at your own risk.
 ;; SOA Record
-jun0.dev	3600	IN	SOA	dan.ns.cloudflare.com. dns.cloudflare.com. 2048382713 10000 2400 604800 3600
+jun0.dev	3600	IN	SOA	dan.ns.cloudflare.com. dns.cloudflare.com. 2049280467 10000 2400 604800 3600
 
 ;; NS Records
 jun0.dev.	86400	IN	NS	dan.ns.cloudflare.com.
@@ -38,14 +38,17 @@ nas.jun0.dev.	1	IN	A	61.76.50.99
 drive.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
 home.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
 mail.jun0.dev.	1	IN	CNAME	jun0.dev.
+oj.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
 photos.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
 ppp.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
+statics.jun0.dev.	1	IN	CNAME	nas.jun0.dev.
 www.jun0.dev.	1	IN	CNAME	jun0.dev.
 
 ;; MX Records
 jun0.dev.	1	IN	MX	10 jun0.dev.
 
 ;; TXT Records
+_acme-challenge.jun0.dev.	1	IN	TXT	"-NgT7PNeGfac7VfvuaFqUI4FYVbBtV5nxhAaohX316w"
 _dmarc.jun0.dev.	1	IN	TXT	"v=DMARC1; p=quarantine; rua=mailto:y@jun0.dev"
 jun0.dev.	1	IN	TXT	"v=spf1 include:spf.mailjet.com -all"
 jun0.dev.	1	IN	TXT	"google-site-verification=KOldXNhgnaNYunGWIGoMieDfG2Ns9TTWR2CdzkmIoH0"
